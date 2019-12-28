@@ -8,14 +8,15 @@ class RoulletteGun extends React.Component {
     
     
     handleClick = () => {
-        this.setState({spinningTheChamber: true});
+        this.setState({spinningTheChamber: true})
+        
         this.timeout = setTimeout(() => {
-            const randomChamber = (Math.ceil(Math.random() * 8)
+            const randomChamber = Math.ceil(Math.random() * 8)
             
      
             
             this.setState({
-                chamber: timeout, 
+                chamber: randomChamber,
                 spinningTheChamber: false
         })
     },2000)
@@ -25,6 +26,19 @@ class RoulletteGun extends React.Component {
         clearTimeout(this.timeout)
     }
 
+    handleDisplay() {
+        const { chamber, spinningTheChamber } = this.state
+        const { bulletInChamber } = this.props
+    if (spinningTheChamber) {
+      return 'spinning the chamber and pulling the trigger! ...'
+    } else if (chamber === bulletInChamber) {
+      return 'BANG!!!!!'
+    } else {
+      return 'you\'re safe!'
+    }
+  }
+
+
     
     render() {
         return (
@@ -32,7 +46,7 @@ class RoulletteGun extends React.Component {
             <button onClick={this.handleClick}>
                 Pull the trigger
             </button>
-            <div>{this.state.chamber}</div>
+            <div>{this.handleDisplay()}</div>
         </div>
         
         )
