@@ -5,6 +5,7 @@ import HelloWorld from './state-drills/HelloWorld';
 import Bomb from './state-drills/Bomb';
 import RoulletteGun from './state-drills/RoulletteGun';
 import Tabs from './state/Tabs';
+import Messages from './Messages';
 
 
 const tabsProp = [
@@ -23,11 +24,6 @@ class App extends React.Component {
     return (
       <div>
         <div>Hello</div>
-        <TheDate />
-        <Counter count={123}/>
-        <HelloWorld />
-        <Bomb />
-        <RoulletteGun bulletInChamber={8}/>
         <Tabs tabs={tabsProp} />
       </div>
     );
