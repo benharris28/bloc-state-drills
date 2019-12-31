@@ -9,3 +9,7 @@ describe(`Tabs Component`, () => {
     ReactDOM.unmountComponentAtNode(div);
   })
 })
+
+it('renders empty given no tabs', () => {
+
+})
