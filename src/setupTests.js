@@ -8,3 +8,13 @@ import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
+
+it('renders empty given no tabs', () => {
+
+})
+
+import { shallow } from 'enzyme'
+import toJson from 'enzyme-to-json'
+
+/* now showing all the content of the file */
+

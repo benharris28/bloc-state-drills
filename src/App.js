@@ -1,9 +1,4 @@
 import React from 'react';
-import TheDate from './state/TheDate';
-import Counter from './state/Counter';
-import HelloWorld from './state-drills/HelloWorld';
-import Bomb from './state-drills/Bomb';
-import RoulletteGun from './state-drills/RoulletteGun';
 import Tabs from './state/Tabs';
 import Messages from './Messages';
 
@@ -25,6 +20,8 @@ class App extends React.Component {
       <div>
         <div>Hello</div>
         <Tabs tabs={tabsProp} />
+        <Messages name="Messages" unread={10} />
+        <Messages name="Notifications" unread={10}/>
       </div>
     );
   }
