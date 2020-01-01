@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Tabs from './Tabs';
+import { shallow } from 'enzyme'
+import toJson from 'enzyme-to-json'
 
 describe(`Tabs Component`, () => {
   it('renders without errors', () => {
@@ -12,4 +14,14 @@ describe(`Tabs Component`, () => {
 
 it('renders empty given no tabs', () => {
 
+})
+
+it('renders empty given no tabs', () => {
+  const wrapper = shallow(<Tabs />)
+  toJson(wrapper)
+})
+
+it('renders empty given no tabs', () => {
+  const wrapper = shallow(<Tabs />)
+  expect(toJson(wrapper)).toMatchSnapshot()
 })

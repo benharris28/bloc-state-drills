@@ -17,7 +17,7 @@ it('renders the UI as expected', () => {
     expect(tree).toMatchSnapshot();  
     });
 
-    it('renders the UI as expected', () => {
+    it('renders the UçI as expected', () => {
       const tree = renderer
         .create(<Messages name="Messages" unread={0}/>)
         .toJSON();
